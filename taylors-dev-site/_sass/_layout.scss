@@ -1,6 +1,6 @@
 /**
  * Site header
- */
+ 
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -91,7 +91,7 @@
         }
     }
 }
-
+*/
 
 
 /**
@@ -107,11 +107,7 @@
     margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
+
 
 .footer-col-wrapper {
     font-size: 15px;
@@ -167,7 +163,7 @@
 /**
  * Page content
  */
-.page-content {
+/*.page-content {
     padding: $spacing-unit 0;
 }
 
@@ -192,13 +188,13 @@
 .post-link {
     display: block;
     font-size: 24px;
-}
+}*/
 
 
 
 /**
  * Posts
- */
+ 
 .post-header {
     margin-bottom: $spacing-unit;
 }
@@ -238,5 +234,5 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
-    }
-}
+    } */
+

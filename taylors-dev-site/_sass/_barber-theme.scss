@@ -1,0 +1,8 @@
+.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center;}
+.hero-logo { text-align: center; top: 2em; position: relative; }
+.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 5em; position: relative; font-size: 2em;}
+.hero-text {font-family: $font-3; color: white; font-size: 10em; font-weight: bold; line-height: 0.4em; padding-top: 0.4em;}
+.hero-text_sub { font-size: 0.4em; padding-left: 3.3em;}
+
+.about-container { position: relative; padding-top: 8em;}
+.about-text {  }

@@ -22,6 +22,12 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+// TIP Styles
+$base-font: 'Open Sans Condensed', Helvetica, sans-serif;
+$font-weight-bold: 700;
+$font-2: 'Lato', Helvetica, sans-serif;
+$font-3: 'Parisienne', Helvetica, sans-serif;
+
 // Width of the content area
 $content-width:    800px;
 
@@ -49,5 +55,6 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "barber-theme",
         "syntax-highlighting"
 ;
