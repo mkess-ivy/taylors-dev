@@ -2,26 +2,6 @@
 layout: default
 ---
 
-<!-- <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
- -->
  <div class="container">
   <section class="hero">
     <div class="hero-text-intro">WELCOME TO</div>
@@ -46,7 +26,7 @@ layout: default
   <section class="services-container" id="services-section">
     <div class="services">
       <div class="title">Barber Services</div>
-      <ul class="services-list">
+      <ul class="services-list laptop-services">
         <li class="services-list-item">hair cuts</li>
         <li class="services-list-item">barber classic shave</li>
         <li class="services-list-item">edge ups / beards</li>
@@ -90,19 +70,25 @@ layout: default
       <div class="services-memo">appointments are preferred, walk-ins are&nbsp;welcome</div>
     </div>
   </section>
+
   <section class="cta">
     <div class="cta-text">
       Ever heard of Barber Catering Services
     </div>
     <div class="btn btn-dark"><a href="#footer-section">Contact the Concierge</a></div>
   </section>
-  <section class="quote">
-    <div class="quote-img"></div>
-    <div class="quote-text">
-      <img src="/images/icon-comb.png" class="center-image" />
-      <div class="title">Words</div>
-      <div class="about-text_main">You are your greatest asset. Put your time, effort and money into training, grooming and encouraging your greatest asset.
-        <div class="quote-author">//  Tom Hopkins</div>
+
+  <section class="quote-container clear">
+    <div class="quote">
+      <div class="quote-img"></div>
+    </div>
+    <div class="quote">
+      <div class="quote-text">
+        <img src="/images/icon-comb.png" class="center-image" />
+        <div class="title">Words</div>
+        <div class="about-text_main text-width">You are your greatest asset. Put your time, effort and money into training, grooming and encouraging your greatest asset.
+          <div class="quote-author">//  Tom Hopkins</div>
+        </div>
       </div>
     </div>
   </section>

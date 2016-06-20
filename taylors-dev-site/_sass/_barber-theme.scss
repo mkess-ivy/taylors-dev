@@ -1,3 +1,5 @@
+
+
 .hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center;}
 .hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto;
 	@include palm { width: 100%; }
@@ -15,16 +17,23 @@
 .about-text_main { font-family: $font-2; font-weight: $font-weight-light; font-size: 1em; text-align: center;
 	@include palm { font-size: 1.3em; }
 }
+.text-width	{ width: 90%; margin: 0 auto; }
 .date { font-size: 4em; font-family: $font-3; font-weight: $font-weight-bold; opacity: .15;  text-align: center; position: relative; top: -3.4em; right: 0em; line-height: 1em;
-	@include palm { position: absolute; top: 2.6em; font-size: 10em; right: 3em; }
+	@include palm { position: absolute; top: 2.6em; font-size: 10em; right: 0em; left: 0em;}
 }
 
 
 
 .services-list { list-style: none; text-transform: uppercase; font-weight: bold; font-family: $base-font; font-size: 1.3em; padding-bottom: 5em; text-align: center;}
 .services-list-item { padding: 0.3em 0; }
-.services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding-bottom: 4em; text-align: center;}
-.services { width: 100%; padding-bottom: 10em; }
+.services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding-bottom: 4em; text-align: center; width: 70%; margin: 0 auto;}
+.services { width: 100%; padding-bottom: 10em; 
+	@include laptop { width: 50%; float: left; padding-top: 5em; }
+}
+
+.laptop-services { 
+	@include palm { padding-bottom: 11em; }
+ }
 
 
 .hours { width: 100%; }
@@ -32,21 +41,30 @@
 
 
 /* CTA */
-.cta { height: 40vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;}
-.cta-text { font-size: 1.7em; text-align: center; padding-top: 3em; text-transform: uppercase; font-family: $font-2; padding-bottom: 1.5em;}
+.cta { height: 40vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;
+	@include palm { height: 50vh; }
+}
+.cta-text { font-size: 1.7em; text-align: center; padding-top: 3em; text-transform: uppercase; font-family: $font-2; padding-bottom: 1.5em;
+	@include palm { font-size: 2.2em; padding: 4em 1em 2em 1em; }
+}
 /* #CTA */
 
 /* QUOTE */
-.quote { height: 100vh; }
-.quote-img { height: 50vh; position: relative; background: url('/images/barber.png') no-repeat; }
-.quote-text { padding-top: 5em; }
+.quote { position: relative; 
+	@include palm { width: 49%; position: relative; display: inline-block; }
+}
+.quote-img { height: 50vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover;}
+.quote-text { padding: 5em 0; 
+	@include palm { padding: 0em; position: relative;}
+}
 .quote-author { padding: 2em 0; font-weight: bold; text-transform: uppercase; }
 /* #QUOTE */
 
 
 .center-image { display: block; margin: 0 auto; padding: 1em 0;
-	@include palm { padding: 4em 0; }
+	@include palm { padding: 2em 0; }
 }
+.clear { clear: both; }
 .title { font-family: $base-font; font-weight: $font-weight-bold; font-size: 2.2em; text-align: center; text-transform: uppercase; padding-bottom: 2em; line-height: 1em;}
 
 /* BUTTON */
@@ -72,6 +90,15 @@
 .footer-copy { width: 100%; position: relative; color: white; text-align: center; width: 70%; font-size: 0.8em; margin: 0 auto; font-family: $font-2; font-weight: $font-weight-light;}
 .copy { padding: 2em 0; width: 100%;}
 .developer-icon { width: 2em; }
-.developer { line-height: 3em; padding: 2em 0; width: 100%; }
+.developer { line-height: 3em; padding: 2em 0; width: 100%; 
+	@include palm { padding: 0; }
+}
+.col3 {
+	@include palm { width: 33%; float: left; }
+}
+.row { width: 100%; }
+.col-2 { 
+	@include palm {width: 49%; display: inline-block;}
+}
 
 /* #FOOTER */
