@@ -1,12 +1,24 @@
 
-
-.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center;}
-.hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto;
-	@include palm { width: 100%; }
+.mk-wrapper { position: absolute; width: 100%; display: inline-block;}
+.header-logo { position: absolute; z-index: 6; width: 3em; padding-top: 0.5em; float: left; padding-left: 25px; }
+.menu-container { float: right; position: relative;  padding-top: 1em; padding-right: 25px;}
+.menu-list { list-style: none; }
+.menu-list-item { display:  inline-block; padding-right: 1em;}
+.menu-list-item a, .menu-list-item a:visited { color: white; text-decoration: none; font-family: $font-2; text-transform: uppercase; font-size: 0.8em;}
+.menu-list-item a:hover { color: #cdcdcd; }
+.sticky { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; border-top: 0; background: #3e3e3e; height: 66px; opacity: 0.4;
 }
-.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 7em; position: relative; font-size: 2em;}
+
+
+.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
+.hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto;
+	@include palm {  }
+}
+.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 4em; position: relative; font-size: 2em;
+	@include palm { padding-top: 3em; }
+}
 .hero-text {font-family: $font-3; color: white; font-size: 5em; font-weight: bold; line-height: 0.4em; padding-top: 0.9em;
-	@include palm { font-size: 10em; padding-top: 0.4em; }
+	@include palm { font-size: 8em; padding-top: 0.4em; }
 }
 .hero-text_sub { font-size: 0.4em; padding-left: 3.3em;}
 
@@ -24,7 +36,9 @@
 
 
 
-.services-list { list-style: none; text-transform: uppercase; font-weight: bold; font-family: $base-font; font-size: 1.3em; padding-bottom: 5em; text-align: center;}
+.services-list { list-style: none; text-transform: uppercase; font-weight: bold; font-family: $base-font; font-size: 1.3em; padding-bottom: 5em; text-align: center;
+	@include palm { padding-bottom: 3em; }
+}
 .services-list-item { padding: 0.3em 0; }
 .services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding-bottom: 4em; text-align: center; width: 70%; margin: 0 auto;}
 .services { width: 100%; padding-bottom: 10em; 
@@ -32,7 +46,7 @@
 }
 
 .laptop-services { 
-	@include palm { padding-bottom: 11em; }
+	@include laptop { padding-bottom: 11em; }
  }
 
 
@@ -44,18 +58,22 @@
 .cta { height: 40vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;
 	@include palm { height: 50vh; }
 }
-.cta-text { font-size: 1.7em; text-align: center; padding-top: 3em; text-transform: uppercase; font-family: $font-2; padding-bottom: 1.5em;
-	@include palm { font-size: 2.2em; padding: 4em 1em 2em 1em; }
+.cta-text { font-size: 1.4em; text-align: center; padding-top: 3em; text-transform: uppercase; font-family: $font-2; padding-bottom: 1.5em;
+	@include palm { font-size: 1.7em; padding: 3em 1em 2em 1em; }
 }
 /* #CTA */
 
 /* QUOTE */
 .quote { position: relative; 
-	@include palm { width: 49%; position: relative; display: inline-block; }
+	/*@include palm { width: 49%; position: relative; }*/
+	@include laptop { width: 100%; overflow: auto; }
 }
-.quote-img { height: 50vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover;}
+.quote-img { height: 50vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover; 
+	@include laptop { height: 100%; position: absolute; width: 50%; float: left; }
+}
 .quote-text { padding: 5em 0; 
 	@include palm { padding: 0em; position: relative;}
+	@include laptop { width: 50%; float: right;  }
 }
 .quote-author { padding: 2em 0; font-weight: bold; text-transform: uppercase; }
 /* #QUOTE */
@@ -65,7 +83,11 @@
 	@include palm { padding: 2em 0; }
 }
 .clear { clear: both; }
-.title { font-family: $base-font; font-weight: $font-weight-bold; font-size: 2.2em; text-align: center; text-transform: uppercase; padding-bottom: 2em; line-height: 1em;}
+.title { font-family: $base-font; font-weight: $font-weight-bold; font-size: 1.8em; text-align: center; text-transform: uppercase; padding-bottom: 2em; line-height: 1em;
+	@include palm { font-size: 2.2em; }
+}
+.title-link { color: white; }
+.title-link:hover { color: #cdcdcd; }
 
 /* BUTTON */
 .btn { display: block; position: relative; text-align: center; text-transform: uppercase; width: inherit; margin: 0 auto; padding: 0.5em 0; font-weight: bold; }
@@ -75,17 +97,19 @@
 .btn-light a:visited { color: #cdcdcd; border: 4px solid #cdcdcd; }
 .btn-light a:hover { color: #3E3E3E; border: 4px solid #3e3e3e; }
 
-.btn-dark a, a:visited { color: black; border: 4px solid #3e3e3e; }
+.btn-dark a, .btn-dark a:visited { color: black; border: 4px solid #3e3e3e; }
 .btn-dark a:hover { color: #4a4a4a; border: 4px solid #4a4a4a; }
 
 /* FOOTER */
 
-.site-footer { padding: $spacing-unit*2 0; background-color: black; position: relative; }
+.site-footer { padding: $spacing-unit*2 0 0; background-color: black; position: relative; }
 .footer-title { color: white; }
 .location-title { color: white; font-size: 1.6em !important;}
 .location-address { text-align: center; font-family: $font-2; font-weight: lighter; }
 .white-line { width: 10%; color: white; margin: 0.3em auto;}
-.col-footer { color: white; text-align: center; padding-bottom: 10em;}
+.col-footer { color: white; text-align: center; padding-bottom: 10em;
+	@include laptop { padding-bottom: 3em; }
+}
 .footer-logo { width: 13em; }
 .footer-copy { width: 100%; position: relative; color: white; text-align: center; width: 70%; font-size: 0.8em; margin: 0 auto; font-family: $font-2; font-weight: $font-weight-light;}
 .copy { padding: 2em 0; width: 100%;}
@@ -94,7 +118,7 @@
 	@include palm { padding: 0; }
 }
 .col3 {
-	@include palm { width: 33%; float: left; }
+	@include laptop { width: 33%; float: left; }
 }
 .row { width: 100%; }
 .col-2 { 

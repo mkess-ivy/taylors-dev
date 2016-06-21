@@ -36,6 +36,7 @@ $on-mobile:			300px;
 $on-palm:          600px;
 $on-laptop:        750px;
 
+
 @mixin palm {
 	@media screen and (min-width: #{$on-palm}) {
 		@content;
