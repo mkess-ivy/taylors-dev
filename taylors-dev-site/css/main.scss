@@ -49,6 +49,13 @@ $on-laptop:        750px;
 	}
 }
 
+/*@mixin responsive {
+    @media screen and (max-width: #{$on-palm}) {
+        @content;
+    }
+}*/
+
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {

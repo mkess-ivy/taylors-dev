@@ -1,14 +1,29 @@
 
 .mk-wrapper { position: absolute; width: 100%; display: inline-block;}
 .header-logo { position: absolute; z-index: 6; width: 3em; padding-top: 0.5em; float: left; padding-left: 25px; }
-.menu-container { float: right; position: relative;  padding-top: 1em; padding-right: 25px;}
-.menu-list { list-style: none; }
-.menu-list-item { display:  inline-block; padding-right: 1em;}
+.mobile-menu { visibility:visible; margin-top:0; opacity:1; pointer-events:all; background: #d2bc90; position: relative; z-index: 5; padding: 5em 0;}
+.mobile-menu li { margin: 0; text-align: center; position: relative; transition: 0.2s; padding: 10px 0;}
+.mobile-menu a { padding: 20px 0; z-index: 10; width: 100%; text-align: center; color: white; text-transform: uppercase; font-family: $base-font; font-size: 2.3em; font-weight: 700;}
+nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
+/*.menu-list { list-style: none; display: block;
+	
+}*/
+/*.menu-list-item { display: none;
+	include latop {display:  inline-block; padding-right: 1em;}
+}
 .menu-list-item a, .menu-list-item a:visited { color: white; text-decoration: none; font-family: $font-2; text-transform: uppercase; font-size: 0.8em;}
 .menu-list-item a:hover { color: #cdcdcd; }
 .sticky { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; border-top: 0; background: #3e3e3e; height: 66px; opacity: 0.4;
+}*/
+.hamburger { display: block; font-size: 2.7em; color: white; padding: 0; margin: 0; position: absolute; top: 0px; right: 18px; z-index: 10;
+	/*@include laptop { display: none; }*/
 }
-
+.hamburger a { color: white; }
+/*.mobile { background: black; height: 50vh; width: 100%; display: block; position: absolute; top: 4em;
+	@include laptop { display: none; }
+}*/
+/*
+.mobile li { display: block; text-align: center; font-size: 3em; position: relative; font-family: $font-2;}*/
 
 .hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
 .hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto;
@@ -112,17 +127,20 @@
 }
 .footer-logo { width: 13em; }
 .footer-copy { width: 100%; position: relative; color: white; text-align: center; width: 70%; font-size: 0.8em; margin: 0 auto; font-family: $font-2; font-weight: $font-weight-light;}
-.copy { padding: 2em 0; width: 100%;}
-.developer-icon { width: 2em; }
+.copy { padding: 2em 0; width: 100%;
+	@include laptop { text-align: left; }
+}
+.developer-icon { width: 2em; padding-right: 1em;}
 .developer { line-height: 3em; padding: 2em 0; width: 100%; 
 	@include palm { padding: 0; }
+	@include laptop { text-align: right; }
 }
 .col3 {
 	@include laptop { width: 33%; float: left; }
 }
 .row { width: 100%; }
 .col-2 { 
-	@include palm {width: 49%; display: inline-block;}
+	@include laptop {width: 45%; display: inline-block; font-size: 0.8em;}
 }
 
 /* #FOOTER */
