@@ -3,16 +3,26 @@ layout: default
 ---
 
  <div class="container">
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-text-intro" id="intro-section">WELCOME TO</div>
     <div class="hero-text">Taylor's <br/><span class="hero-text_sub">Barbershop</span></div>
     <div class="hero-logo">
-      <img src="/images/tb-logo.png" />
+      <img src="/images/tb-logo.png" alt="Taylor's Barbershop Logo" title="Taylor's Barbershop Logo"/>
     </div>
   </section>
+  <div class="mk-wrapper">
+    <div class="header-logo">
+      <img src="/images/header-logo.png">
+    </div>
+    
+    <nav class="menu-container">  
+      <a class="hamburger" href="#services-section">view services + hours</a>
+      <a class="back-top" href="#hero"><i class="fa fa-chevron-circle-up fa-2x"></i></a>
+    </nav>
+  </div>
   <section class="about-container" id="about-section">
     <div class="about-text">
-      <img src="/images/icon-comb.png" class="center-image" />
+      <img src="/images/icon-comb.png" class="center-image" alt="TB Icon" title="TB Icon"/>
       <div class="title">About Us</div>
       <div class="about-text_main">
       Taylor's was founded on May 1, 2009 by Dawayne E. Taylor. Taylor's Barbershops and Salons are unique, sleek, upbeat and innovative to give you a feel of comfort, fun and relaxation. While delivering one of the best haircuts, hair styles too.
@@ -32,10 +42,10 @@ layout: default
         <li class="services-list-item">edge ups / beards</li>
         <li class="services-list-item">bangs &amp; neck-line trim</li>
         <li class="services-list-item">hot towel shave</li>
-        <li class="services-list-item">shampoo / cut (adults &amp; children)</li>
+        <li class="services-list-item">shampoo / cut (adults &amp;&nbsp;children)</li>
       </ul>
       <div class="services-memo">all other specialty services, please contact nearest shop for pricing</div>
-      <div class="btn btn-light"><a href="#footer-section">book now</a></div>
+      <div class="btn btn-light"><a href="#contact-section">book now</a></div>
     </div>
     <div class="services">
       <div class="title">Salon Services</div>
@@ -48,11 +58,11 @@ layout: default
         <li class="services-list-item">makeup</li>
       </ul>
       <div class="services-memo">all other specialty services, please contact nearest shop for pricing</div>
-      <div class="btn btn-light"><a href="#footer-section">book now</a></div>
+      <div class="btn btn-light"><a href="#contact-section">book now</a></div>
     </div>
   </section>
 
-  <section class="hours-container" id="hours-section">
+  <section id="hours-section">
     <div class="hours">
       <div class="title">Hours of Operation</div>
       <ul class="services-list hours-list">
@@ -70,16 +80,17 @@ layout: default
 
   <section class="cta">
     <div class="cta-text">
-      Ever heard of Barber Catering Services
+      <!-- Ever heard of Barber Catering Services -->
+      Home Appointments Starting At $60
     </div>
-    <div class="btn btn-dark"><a href="#footer-section">Contact the Concierge</a></div>
+    <div class="btn btn-white"><a href="#contact-section">Contact the Concierge</a></div>
   </section>
 
   <section class="quote-container clear">
     <div class="quote">
       <div class="quote-img"></div>
       <div class="quote-text">
-        <img src="/images/icon-comb.png" class="center-image" />
+        <img src="/images/icon-comb.png" class="center-image" alt="TB Icon" title="TB Icon"/>
         <div class="title">Words</div>
         <div class="about-text_main text-width">You are your greatest asset. Put your time, effort and money into training, grooming and encouraging your greatest asset.
           <div class="quote-author">//  Tom Hopkins</div>
@@ -88,5 +99,4 @@ layout: default
     </div>
   </section>
   
-
  </div>

@@ -1,6 +1,4 @@
-/**
- * Reset some basic elements
- */
+/* Reset */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -9,10 +7,7 @@ dl, dd, ol, ul, figure {
 }
 
 
-
-/**
- * Basic styling
- */
+/* Basic styling */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
@@ -26,52 +21,26 @@ body {
 }
 
 
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
+/* Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
+%vertical-rhythm { margin-bottom: $spacing-unit / 2; }
 
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
 
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
+/* Images */
+img { max-width: 100%; vertical-align: middle; }
 
-/**
- * Links
- */
-a {
-    color: $text-color;
-    text-decoration: none;
 
-   /* &:visited {
-        color: darken($brand-color, 15%);
-    }
+/* Headings */
+h1, h2, h3, h4, h5, h6 { font-weight: $base-font-weight; }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }*/
-}
 
-/**
- * Wrapper
- */
+/* Links */
+a { color: $text-color; text-decoration: none; }
+
+
+/* Wrapper */
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -89,16 +58,14 @@ a {
     }
 }
 
-/**
- * Clearfix
- */
-%clearfix {
 
+
+
+/* Clearfix */
+%clearfix {
     &:after {
         content: "";
         display: table;
         clear: both;
     }
 }
-
-

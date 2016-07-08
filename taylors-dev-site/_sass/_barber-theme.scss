@@ -1,34 +1,24 @@
 
-.mk-wrapper { position: absolute; width: 100%; display: inline-block;}
-.header-logo { position: absolute; z-index: 6; width: 3em; padding-top: 0.5em; float: left; padding-left: 25px; }
-.mobile-menu { visibility:visible; margin-top:0; opacity:1; pointer-events:all; background: #d2bc90; position: relative; z-index: 5; padding: 5em 0;}
-.mobile-menu li { margin: 0; text-align: center; position: relative; transition: 0.2s; padding: 10px 0;}
-.mobile-menu a { padding: 20px 0; z-index: 10; width: 100%; text-align: center; color: white; text-transform: uppercase; font-family: $base-font; font-size: 2.3em; font-weight: 700;}
-nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
-/*.menu-list { list-style: none; display: block;
-	
-}*/
-/*.menu-list-item { display: none;
-	include latop {display:  inline-block; padding-right: 1em;}
-}
-.menu-list-item a, .menu-list-item a:visited { color: white; text-decoration: none; font-family: $font-2; text-transform: uppercase; font-size: 0.8em;}
-.menu-list-item a:hover { color: #cdcdcd; }
-.sticky { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; border-top: 0; background: #3e3e3e; height: 66px; opacity: 0.4;
-}*/
-.hamburger { display: block; font-size: 2.7em; color: white; padding: 0; margin: 0; position: absolute; top: 0px; right: 18px; z-index: 10;
-	/*@include laptop { display: none; }*/
-}
-.hamburger a { color: white; }
-/*.mobile { background: black; height: 50vh; width: 100%; display: block; position: absolute; top: 4em;
-	@include laptop { display: none; }
-}*/
-/*
-.mobile li { display: block; text-align: center; font-size: 3em; position: relative; font-family: $font-2;}*/
 
-.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
-.hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto;
-	@include palm {  }
+/* Top Navigation */
+.mk-wrapper { position: absolute; width: 100%; display: inline-block;}
+.mk-wrapper.navbar-fixed-top { position: fixed; top: 0; left: 0; right: 0; }
+.header-logo { position: absolute; z-index: 6; width: 3em; padding-top: 0.5em; float: left; padding-left: 25px; }
+.hamburger { display: block; font-size:0.7em; color: white; padding: 5px 10px; margin: 0; position: absolute; top: 18px; right: 60px; z-index: 10; text-transform: uppercase; border: 2px solid white; font-family: $font-2;
+	@include laptop { font-size: 0.9em; right: 117px; top:13px;}
 }
+.hamburger:hover { border: 2px solid #d1bc8f; }
+.back-top:hover, .hamburger:hover { color: #d1bc8f; }
+.back-top { width: 2em; display: block; position: absolute; top: 18px; right: 20px; z-index: 10; color: white;
+	@include laptop { right: 70px; top: 14px; }
+}
+.sticky { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; border-top: 0; background: #3e3e3e; height: 66px; }
+/* #Top Navigation */
+
+
+/* Hero */
+.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
+.hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto; }
 .hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 4em; position: relative; font-size: 2em;
 	@include palm { padding-top: 3em; }
 }
@@ -36,21 +26,23 @@ nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
 	@include palm { font-size: 8em; padding-top: 0.4em; }
 }
 .hero-text_sub { font-size: 0.4em; padding-left: 3.3em;}
+/* #Hero */
 
 
-
+/* About */
 .about-container { position: relative; padding-top: 8em;}
 .about-text { text-align: center; width: 70%; margin: 0 auto; padding-bottom: 5em;}
 .about-text_main { font-family: $font-2; font-weight: $font-weight-light; font-size: 1em; text-align: center;
 	@include palm { font-size: 1.3em; }
 }
-.text-width	{ width: 90%; margin: 0 auto; }
+.text-width	{ width: 85%; margin: 0 auto; }
 .date { font-size: 4em; font-family: $font-3; font-weight: $font-weight-bold; opacity: .15;  text-align: center; position: relative; top: -3.4em; right: 0em; line-height: 1em;
 	@include palm { position: absolute; top: 2.6em; font-size: 10em; right: 0em; left: 0em;}
 }
+/* #About */
 
 
-
+/* Services + Hours */
 .services-list { list-style: none; text-transform: uppercase; font-weight: bold; font-family: $base-font; font-size: 1.3em; padding-bottom: 5em; text-align: center;
 	@include palm { padding-bottom: 3em; }
 }
@@ -59,64 +51,65 @@ nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
 .services { width: 100%; padding-bottom: 10em; 
 	@include laptop { width: 50%; float: left; padding-top: 5em; }
 }
-
-.laptop-services { 
-	@include laptop { padding-bottom: 11em; }
- }
-
-
 .hours { width: 100%; }
 .hours-list { font-size: 1em; line-height: 2em; }
+/* #Services + Hours */
 
 
 /* CTA */
-.cta { height: 40vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;
-	@include palm { height: 50vh; }
+.cta { height: 55vh; background: url('/images/cta-v2.png') no-repeat; position: relative; background-size: cover;
+	@include palm { height: 65vh; }
 }
-.cta-text { font-size: 1.4em; text-align: center; padding-top: 3em; text-transform: uppercase; font-family: $font-2; padding-bottom: 1.5em;
-	@include palm { font-size: 1.7em; padding: 3em 1em 2em 1em; }
+.cta-text { font-size: 1.4em; text-align: center; padding: 4em 0 1.5em 0; text-transform: uppercase; font-family: $font-2; font-weight: 700;
+	@include palm { font-size: 1.7em; padding: 4em 1em 2em 1em; }
 }
 /* #CTA */
 
-/* QUOTE */
+
+/* Quote */
 .quote { position: relative; 
-	/*@include palm { width: 49%; position: relative; }*/
 	@include laptop { width: 100%; overflow: auto; }
 }
-.quote-img { height: 50vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover; 
+.quote-img { height: 70vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover; 
 	@include laptop { height: 100%; position: absolute; width: 50%; float: left; }
 }
-.quote-text { padding: 5em 0; 
+.quote-text { padding: 5em 0; height: 70vh;
 	@include palm { padding: 0em; position: relative;}
 	@include laptop { width: 50%; float: right;  }
+	@include desktop { padding: 3em 0;  }
 }
-.quote-author { padding: 2em 0; font-weight: bold; text-transform: uppercase; }
-/* #QUOTE */
+.quote-author { padding: 2em 0; font-weight: bold; text-transform: uppercase; 
+	@include laptop { padding: 1em 0; }
+}
+/* #Quote */
 
 
-.center-image { display: block; margin: 0 auto; padding: 1em 0;
-	@include palm { padding: 2em 0; }
+/* Misc + Reusable Classes */
+.center-image { display: block; margin: 0 auto; padding: 1em 0; width: 3.5em;
+	@include palm { padding: 3em 0; }
 }
 .clear { clear: both; }
 .title { font-family: $base-font; font-weight: $font-weight-bold; font-size: 1.8em; text-align: center; text-transform: uppercase; padding-bottom: 2em; line-height: 1em;
 	@include palm { font-size: 2.2em; }
+	@include laptop { padding-bottom: 1em; }
 }
 .title-link { color: white; }
 .title-link:hover { color: #cdcdcd; }
+/* #Misc + Reusable Classes */
 
-/* BUTTON */
+
+/* Button */
 .btn { display: block; position: relative; text-align: center; text-transform: uppercase; width: inherit; margin: 0 auto; padding: 0.5em 0; font-weight: bold; }
 .btn a {  padding: 0.5em; text-decoration: none;  }
+.btn-light a { border: 4px solid #3E3E3E; color: #3E3E3E;}
+.btn-light a:visited { color: #3E3E3E; border: 4px solid #3E3E3E; }
+.btn-light a:hover { color: #d1bc8f; border: 4px solid #d1bc8f; }
+.btn-white a, .btn-white a:visited { color: black; border: 4px solid black; }
+.btn-white a:hover { color: white; border: 4px solid white; }
+/* #Button */
 
-.btn-light a { border: 4px solid #000; color: #000;}
-.btn-light a:visited { color: #cdcdcd; border: 4px solid #cdcdcd; }
-.btn-light a:hover { color: #3E3E3E; border: 4px solid #3e3e3e; }
 
-.btn-dark a, .btn-dark a:visited { color: black; border: 4px solid #3e3e3e; }
-.btn-dark a:hover { color: #4a4a4a; border: 4px solid #4a4a4a; }
-
-/* FOOTER */
-
+/* Footer */
 .site-footer { padding: $spacing-unit*2 0 0; background-color: black; position: relative; }
 .footer-title { color: white; }
 .location-title { color: white; font-size: 1.6em !important;}
@@ -132,7 +125,7 @@ nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
 }
 .developer-icon { width: 2em; padding-right: 1em;}
 .developer { line-height: 3em; padding: 2em 0; width: 100%; 
-	@include palm { padding: 0; }
+	@include palm { padding: 0 0 2em 0; }
 	@include laptop { text-align: right; }
 }
 .col3 {
@@ -142,5 +135,4 @@ nav ul { display: block;visibility: hidden;opacity: 0;transition: all 0.2s; }
 .col-2 { 
 	@include laptop {width: 45%; display: inline-block; font-size: 0.8em;}
 }
-
-/* #FOOTER */
+/* #Footer */
