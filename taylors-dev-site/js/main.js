@@ -1,5 +1,5 @@
 
-// Smooth Scroll - add this back in later
+// Smooth Scroll
 $(document).ready(function(){
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
@@ -21,10 +21,8 @@ $(document).ready(function(){
 	//Even when the window is resized, run this code.
   	$(window).resize(function(){
     
-    //Variables
     var windowHeight = $(window).height();
     
-    //Find the value of 90% of the viewport height
     var ninetypercent = .9 * windowHeight;
 
     $(document).scroll(function(){
