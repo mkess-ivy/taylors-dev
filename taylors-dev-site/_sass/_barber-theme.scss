@@ -19,7 +19,7 @@
 /* Hero */
 .hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
 .hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto; }
-.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 4em; position: relative; font-size: 2em;
+.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 2em; position: relative; font-size: 2em;
 	@include palm { padding-top: 3em; }
 }
 .hero-text {font-family: $font-3; color: white; font-size: 5em; font-weight: bold; line-height: 0.4em; padding-top: 0.9em;
