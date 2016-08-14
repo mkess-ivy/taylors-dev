@@ -57,4 +57,12 @@ $(document).ready(function(){
   //   return false;
   // })
 
+  // Slider
+  $('.slider').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      mobileFirst: true,
+    });
+
 });
