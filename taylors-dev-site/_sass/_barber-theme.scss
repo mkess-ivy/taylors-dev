@@ -3,10 +3,11 @@
 /* Top Navigation */
 .mk-wrapper { position: absolute; width: 100%; display: inline-block;}
 .mk-wrapper.navbar-fixed-top { position: fixed; top: 0; left: 0; right: 0; }
-.header-logo { position: absolute; z-index: 6; width: 3em; padding-top: 0.5em; float: left; padding-left: 25px; }
+.header-logo { position: absolute; z-index: 6; width: 6em; padding-top: 0.5em; float: left; padding-left: 25px; }
 .hamburger { display: block; font-size:0.7em; color: white; padding: 5px 10px; margin: 0; position: absolute; top: 18px; right: 60px; z-index: 10; text-transform: uppercase; border: 2px solid white; font-family: $font-2;
 	@include laptop { font-size: 0.9em; right: 117px; top:13px;}
 }
+.services-item { right: 235px; }
 .hamburger:hover { border: 2px solid #d1bc8f; }
 .back-top:hover, .hamburger:hover { color: #d1bc8f; }
 .back-top { width: 2em; display: block; position: absolute; top: 18px; right: 20px; z-index: 10; color: white;
@@ -19,13 +20,16 @@
 /* Hero */
 .hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
 .hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto; }
-.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 2em; position: relative; font-size: 2em;
-	@include palm { padding-top: 3em; }
+.hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 6em; position: relative; font-size: 2em;
+	@include laptop { padding-top: 5em; }
 }
-.hero-text {font-family: $font-3; color: white; font-size: 5em; font-weight: bold; line-height: 0.4em; padding-top: 0.9em;
-	@include palm { font-size: 8em; padding-top: 0.4em; }
+.hero-text {font-family: $font-3; color: white; font-size: 5.5em; font-weight: bold; line-height: 0.7em; padding-top: 0.5em;
+	@include palm { font-size: 10em; padding-top: 0.4em; }
+	@include laptop { /*font-size: 10em;*/ }
 }
-.hero-text_sub { font-size: 0.4em; padding-left: 3.3em;}
+.hero-text_sub { font-size: 0.3em; font-family: $base-font; display: block; padding-top: 1em;
+	@include laptop { /*font-size: 0.3em;*/ }
+}
 /* #Hero */
 
 
@@ -57,8 +61,8 @@
 
 
 /* CTA */
-.cta { height: 55vh; background: url('/images/cta-v2.png') no-repeat; position: relative; background-size: cover;
-	@include palm { height: 65vh; }
+.cta { height: 45vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;
+	/*@include palm { height: 65vh; }*/
 }
 .cta-text { font-size: 1.4em; text-align: center; padding: 4em 0 1.5em 0; text-transform: uppercase; font-family: $font-2; font-weight: 700;
 	@include palm { font-size: 1.7em; padding: 4em 1em 2em 1em; }
@@ -70,11 +74,11 @@
 .quote { position: relative; 
 	@include laptop { width: 100%; overflow: auto; }
 }
-.quote-img { height: 70vh; position: relative; background: url('/images/barber.png') no-repeat; background-size: cover; 
+.quote-img { height: 70vh; position: relative; background: url('/images/barbers2.jpg') no-repeat; background-size: cover; background-position: top right;
 	@include laptop { height: 100%; position: absolute; width: 50%; float: left; }
 }
-.quote-text { padding: 5em 0; height: 70vh;
-	@include palm { padding: 0em; position: relative;}
+.quote-text { padding: 5em 0; height: 40vh;
+	@include palm { padding: 0em; position: relative; height: 60vh; }
 	@include laptop { width: 50%; float: right;  }
 	@include desktop { padding: 3em 0;  }
 }
@@ -110,15 +114,19 @@
 
 
 /* Footer */
-.site-footer { padding: $spacing-unit*2 0 0; background-color: black; position: relative; }
+.site-footer { padding: $spacing-unit*2 0 0; /*background-color: black;*/ position: relative; background-image: url('/images/scissors-blk.jpg'); background-size: cover; background-position: top right;
+	@include palm { background-position: center center; }
+}
 .footer-title { color: white; }
 .location-title { color: white; font-size: 1.6em !important;}
 .location-address { text-align: center; font-family: $font-2; font-weight: lighter; }
 .white-line { width: 10%; color: white; margin: 0.3em auto;}
-.col-footer { color: white; text-align: center; padding-bottom: 10em;
-	@include laptop { padding-bottom: 3em; }
+.col-footer { color: white; text-align: center; padding-bottom: 10em; 
+	@include laptop { padding-bottom: 7em; }
 }
-.footer-logo { width: 13em; }
+.footer-logo { width: 12em; 
+	@include desktop { width: 15em; }
+}
 .footer-copy { width: 100%; position: relative; color: white; text-align: center; width: 70%; font-size: 0.8em; margin: 0 auto; font-family: $font-2; font-weight: $font-weight-light;}
 .copy { padding: 2em 0; width: 100%;
 	@include laptop { text-align: left; }
@@ -136,3 +144,18 @@
 	@include laptop {width: 45%; display: inline-block; font-size: 0.8em;}
 }
 /* #Footer */
+
+/* Franchise */
+.mk-wrapper2 { position: relative; background-color: #3E3E3E;  width: 100%; display: inline-block; z-index: 100;}
+.hero-2 { /*padding: 0 20em; */ width: 70%; margin: 0 auto; }
+.franchise-hero { color: black; text-align: center; padding: 1em 0 0.5em; font-size: 4.5em;
+	@include palm { font-size: 5.5em; }
+}
+.hero-text { display: block; }
+.franchise-logo { margin: 0 auto; display: block; width: 10em; }
+.franchise-title { padding: 5em 0 2em; }
+
+.franchise-form { width: 80%; margin: 0 auto; padding-top: 5em; 
+	@include palm { width: 60%; }
+	@include desktop { width: 40%; }
+}
