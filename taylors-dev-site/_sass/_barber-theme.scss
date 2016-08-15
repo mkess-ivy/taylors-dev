@@ -1,4 +1,8 @@
-
+@font-face {
+  font-family: 'Debby';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('Debby.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
 /* Top Navigation */
 .mk-wrapper { position: absolute; width: 100%; display: inline-block;}
@@ -18,16 +22,16 @@
 
 
 /* Hero */
-.hero { height: 100vh; position: relative; background: url('/images/hero3.png') no-repeat; background-size: cover; text-align: center; z-index: 3;}
+.hero { height: 100vh; position: relative; background: url('/images/barber-hero.jpg') no-repeat; background-size: cover; text-align: center; z-index: 3;}
 .hero-logo { text-align: center; top: 2em; position: relative; width: 13em; margin: 0 auto; }
 .hero-text-intro { font-family: $base-font; font-weight: $font-weight-bold; color: white; padding-top: 6em; position: relative; font-size: 2em;
 	@include laptop { padding-top: 5em; }
 }
-.hero-text {font-family: $font-3; color: white; font-size: 5.5em; font-weight: bold; line-height: 0.7em; padding-top: 0.5em;
+.hero-text {font-family: $font-4; color: white; font-size: 5.5em; line-height: 0.7em; padding-top: 0.5em;
 	@include palm { font-size: 10em; padding-top: 0.4em; }
 	@include laptop { /*font-size: 10em;*/ }
 }
-.hero-text_sub { font-size: 0.3em; font-family: $base-font; display: block; padding-top: 1em;
+.hero-text_sub { font-size: 0.3em; font-family: $base-font; display: block; padding-top: 1em; font-weight: bold;
 	@include laptop { /*font-size: 0.3em;*/ }
 }
 /* #Hero */
@@ -35,7 +39,10 @@
 
 /* About */
 .about-container { position: relative; padding-top: 8em;}
-.about-text { text-align: center; width: 70%; margin: 0 auto; padding-bottom: 5em;}
+.about-text { text-align: center; width: 70%; margin: 0 auto; padding-bottom: 5em;
+	@include palm { padding-bottom: 15em; }
+	@include widescreen { width: 40%; }
+}
 .about-text_main { font-family: $font-2; font-weight: $font-weight-light; font-size: 1em; text-align: center;
 	@include palm { font-size: 1.3em; }
 }
@@ -47,25 +54,36 @@
 
 
 /* Services + Hours */
-.services-list { list-style: none; text-transform: uppercase; font-weight: bold; font-family: $base-font; font-size: 1.3em; padding-bottom: 5em; text-align: center;
+.services-list { list-style: none; text-transform: uppercase; font-family: $font-2;  padding-bottom: 5em; text-align: center; font-size: 0.9em;
 	@include palm { padding-bottom: 3em; }
 }
-.services-list-item { padding: 0.3em 0; }
+.services-list-item { padding: 0.3em 0; color: white; }
 .services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding-bottom: 4em; text-align: center; width: 70%; margin: 0 auto;}
-.services { width: 100%; padding-bottom: 10em; 
-	@include laptop { width: 50%; float: left; padding-top: 5em; }
+.services { width: 100%; /*padding-bottom: 10em;*/ 
+	@include laptop { width: 25%; float: left; padding-top: 5em; }
 }
-.hours { width: 100%; }
+.hours-section, .subscribe-section { width: 50%; float: left; position: relative; padding: 8em 0;}
 .hours-list { font-size: 1em; line-height: 2em; }
+.services-hero { background-image: url('/images/barberchair.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 45vh; position: relative;}
+.services-text { width: 50%; float: left; }
+.services-text_p { text-transform: uppercase; padding: 5.5em 0; color: white; font-weight: lighter; font-size: 1.2em; text-align: center; letter-spacing: 1.3px; width: 70%; margin: 0 auto; }
+.subscribe_p { font-family: $font-2; width: 70%; margin: 0 auto; text-align: center;}
+.newsletter {     text-align: center;
+    padding-top: 2em;
+    color: #eee;
+    border-bottom: 2px solid black;
+    width: 40%;
+    margin: 0 auto; }
+/*.subscribe-section {  }*/
 /* #Services + Hours */
 
 
 /* CTA */
-.cta { height: 45vh; background: url('/images/cta.png') no-repeat; position: relative; background-size: cover;
+.cta { height: 45vh; background: url('/images/brushes.png') no-repeat; position: relative; background-size: cover;
 	/*@include palm { height: 65vh; }*/
 }
-.cta-text { font-size: 1.4em; text-align: center; padding: 4em 0 1.5em 0; text-transform: uppercase; font-family: $font-2; font-weight: 700;
-	@include palm { font-size: 1.7em; padding: 4em 1em 2em 1em; }
+.cta-text { font-size: 1.4em; text-align: center; padding: 4em 0 0em 0; text-transform: uppercase; font-family: $font-2; font-weight: 700;
+	@include palm { font-size: 1.7em; padding: 4em 1em 0em 1em; }
 }
 /* #CTA */
 
@@ -78,27 +96,36 @@
 	@include laptop { height: 100%; position: absolute; width: 50%; float: left; }
 }
 .quote-text { padding: 5em 0; height: 40vh;
-	@include palm { padding: 0em; position: relative; height: 60vh; }
+	@include palm { padding: 0em; position: relative; height: 55vh;}
 	@include laptop { width: 50%; float: right;  }
 	@include desktop { padding: 3em 0;  }
 }
 .quote-author { padding: 2em 0; font-weight: bold; text-transform: uppercase; 
 	@include laptop { padding: 1em 0; }
 }
+
+.cta-subscribe-container { padding: 4em 0 7em; }
+
 /* #Quote */
 
 
 /* Misc + Reusable Classes */
+.spacer { padding: 1em 0; }
 .center-image { display: block; margin: 0 auto; padding: 1em 0; width: 3.5em;
 	@include palm { padding: 3em 0; }
 }
+.center-me { text-align: center; }
 .clear { clear: both; }
 .title { font-family: $base-font; font-weight: $font-weight-bold; font-size: 1.8em; text-align: center; text-transform: uppercase; padding-bottom: 2em; line-height: 1em;
-	@include palm { font-size: 2.2em; }
+	@include palm { font-size: 1.5em; }
 	@include laptop { padding-bottom: 1em; }
 }
+.title_brand { font-family: $font-4; text-transform: lowercase; font-size: 3em; }
 .title-link { color: white; }
 .title-link:hover { color: #cdcdcd; }
+.title_white { color: white; }
+.link_brand a { font-family: $font-4; color: $brand-link; text-transform: lowercase; font-size: 2.5em; padding-top: 1em; display: block; text-align: center;}
+.link_brand-black a { color: black; font-size: 3em;}
 /* #Misc + Reusable Classes */
 
 
@@ -110,6 +137,7 @@
 .btn-light a:hover { color: #d1bc8f; border: 4px solid #d1bc8f; }
 .btn-white a, .btn-white a:visited { color: black; border: 4px solid black; }
 .btn-white a:hover { color: white; border: 4px solid white; }
+/*.btn-brand a { font-family:  }*/
 /* #Button */
 
 

@@ -1,6 +1,6 @@
 
 // Smooth Scroll
-$(document).ready(function(){
+// $(document).ready(function(){
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
@@ -58,11 +58,11 @@ $(document).ready(function(){
   // })
 
   // Slider
-  $('.slider').slick({
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 8000,
-      mobileFirst: true,
-    });
+  // $('.slider').slick({
+  //     dots: true,
+  //     autoplay: true,
+  //     autoplaySpeed: 8000,
+  //     mobileFirst: true,
+  //   });
 
-});
+// });

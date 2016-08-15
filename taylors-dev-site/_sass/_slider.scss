@@ -1,0 +1,19 @@
+
+#sampletext {
+  position: absolute; 
+  font : italic bold 60px arial;
+  color : #aaaaaa;
+  margin-top : 200px;
+}
+
+
+#slideshow > div { 
+    position: absolute; 
+    /*top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; */
+    width: 30%; 
+    top: 5em; left: 10em;
+}
+.marginauto { margin: 0 auto; }

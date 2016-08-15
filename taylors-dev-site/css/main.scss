@@ -17,6 +17,7 @@ $spacing-unit:     30px;
 $text-color:       #000;
 $background-color: #fdfdfd;
 $brand-color:      #CDCDCD;
+$brand-link:        #dac3a3;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -28,6 +29,7 @@ $font-weight-bold: 700;
 $font-weight-light: 300;
 $font-2: 'Lato', Helvetica, sans-serif;
 $font-3: 'Parisienne', Helvetica, sans-serif;
+$font-4: 'Debby', 'Parisienne', sans-serif;
 
 // Width of the content area
 $content-width:    800px;
@@ -36,6 +38,7 @@ $on-mobile:         300px;
 $on-palm:          600px;
 $on-laptop:        750px;
 $on-desktop:        1000px;
+$on-widescreen:     1200px;
 
 
 @mixin palm {
@@ -52,6 +55,12 @@ $on-desktop:        1000px;
 
 @mixin desktop { 
     @media screen and (min-width: #{$on-desktop}) {
+        @content;
+    }
+}
+
+@mixin widescreen { 
+    @media screen and (min-width: #{$on-widescreen}) {
         @content;
     }
 }
@@ -84,7 +93,6 @@ $on-desktop:        1000px;
         "base",
         "barber-theme",
         "vanilla-form",
-        "slick",
-        "slick-theme",
+        "slider",
         "syntax-highlighting"
 ;
