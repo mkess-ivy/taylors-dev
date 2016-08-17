@@ -59,7 +59,7 @@
 	@include palm { padding-bottom: 3em; }
 }
 .services-list-item { padding: 0.3em 0; color: white; }
-.services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding-bottom: 4em; text-align: center; width: 70%; margin: 0 auto;}
+.services-memo { text-transform: uppercase; font-weight: $font-weight-light; font-size: 0.8em; padding: 2em 0; text-align: center; width: 70%; margin: 0 auto;}
 .services { width: 100%; /*padding-bottom: 10em;*/ 
 	@include laptop { width: 25%; float: left; padding-top: 1em; padding-left: 1.5em;}
 }
@@ -72,6 +72,7 @@
 	/*@include palm { padding: 2em 0; }*/
 	@include laptop	{ height: 55vh; }
 }
+.list_text-sm { font-size: 0.8em; font-weight: bold;}
 .services-text { width: 100%;
 	@include laptop { width: 40%; float: right; }
 }
@@ -85,7 +86,7 @@
 
 
 /* CTA */
-.cta { height: 45vh; background: url('/images/brushes.png') no-repeat; position: relative; background-size: cover;
+.cta { background: url('/images/brushes.png') no-repeat; position: relative; background-size: cover;
 	/*@include palm { height: 65vh; }*/
 }
 .cta-text { font-size: 1.4em; text-align: center; padding: 2.5em 0 0em 0; text-transform: uppercase; font-family: $font-2; font-weight: 700;
@@ -126,13 +127,16 @@
 	@include palm { font-size: 1.5em; }
 	@include laptop { padding-bottom: 1em; }
 }
-.title_brand { font-family: $font-4; text-transform: lowercase; font-size: 3em; }
+.title_brand { font-family: $font-4; text-transform: lowercase; font-size: 2.2em;
+	@include palm { font-size: 3em; }
+}
 .title-link { color: white; }
 .title-link:hover { color: #cdcdcd; }
 .title_white { color: white; }
 .link_brand a { font-family: $font-4; color: $brand-link; text-transform: lowercase; font-size: 2.5em; padding: 1em 0; display: block; text-align: center;}
 /*.link_brand a:hover { border-bottom: 2px solid $brand-link; }*/
-.link_brand-black a { color: black; font-size: 3em; padding-top: 0.5em; 
+.link_brand-black a { color: black; font-size: 2em; padding-top: 0.5em; 
+	@include palm { font-size: 3em; }
 	@include laptop { padding-top: 1em; }
 }
 /* #Misc + Reusable Classes */
@@ -156,7 +160,7 @@
 }
 .footer-title { color: white; }
 .location-title { color: white; font-size: 1.6em !important;}
-.location-address { text-align: center; font-family: $font-2; font-weight: lighter; }
+.location-address { text-align: center; font-family: $font-2; font-weight: normal; }
 .white-line { width: 10%; color: white; margin: 0.3em auto;}
 .col-footer { color: white; text-align: center; padding-bottom: 5em; 
 	/*@include palm { padding-bottom: 10em;  }*/

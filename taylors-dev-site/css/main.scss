@@ -34,12 +34,19 @@ $font-4: 'Debby', 'Parisienne', sans-serif;
 // Width of the content area
 $content-width:    800px;
 
+$on-mobile-sm:      240px;
 $on-mobile:         300px;
 $on-palm:          600px;
 $on-laptop:        750px;
 $on-desktop:        1000px;
 $on-widescreen:     1200px;
 
+
+@mixin mobile-sm {
+    @media screen and (min-width: #{$on-mobile-sm}) {
+        @content;
+    }
+}
 
 @mixin palm {
     @media screen and (min-width: #{$on-palm}) {
