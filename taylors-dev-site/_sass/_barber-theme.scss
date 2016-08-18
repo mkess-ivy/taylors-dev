@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Debby';
-  
-  src: url('Debby.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('/Debby.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 /* Top Navigation */
@@ -76,11 +75,11 @@
 .services-text { width: 100%;
 	@include laptop { width: 40%; float: right; }
 }
-.services-text_p { font-family: $font-2; text-transform: uppercase; color: white; font-weight: lighter; font-size: 1.2em; text-align: center; width: 80%; margin: 0 auto; 
+.services-text_p { font-family: $font-2; color: white; 
 	@include laptop { padding: 3.5em 0 0; }
 }
-.subscribe_p { font-family: $font-2; width: 70%; margin: 0 auto; text-align: center;}
-.newsletter { text-align: center; padding-top: 2em; color: #eee; border-bottom: 2px solid black; width: 60%; margin: 0 auto; }
+.subscribe_p { width: 70%; margin: 0 auto;}
+.newsletter { text-align: center; padding-top: 2em; color: #eee; width: 60%; margin: 0 auto; }
 /*.subscribe-section {  }*/
 /* #Services + Hours */
 
@@ -186,6 +185,9 @@
 	@include laptop {width: 45%; display: inline-block; font-size: 0.8em;}
 }
 /* #Footer */
+
+/* Newsletter */
+#mc_embed_signup input.email { margin: 0 auto; }
 
 /* Franchise */
 .mk-wrapper2 { position: relative; background-color: #3E3E3E;  width: 100%; display: inline-block; z-index: 100;}

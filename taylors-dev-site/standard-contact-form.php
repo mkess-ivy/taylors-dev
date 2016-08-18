@@ -50,7 +50,7 @@ $vf_config = array(
      * E.g. Multiple recipients
      * 'emailRecipients' => 'john@domain.com, andy@domain.com',
      */
-    'emailRecipients' => 'montier.kess@gmail.com',
+    'emailRecipients' => 'dtaylorent@gmail.com',
 
     /**
      * If is not empty it sets a header From in e-mail message (sets sender e-mail).
@@ -86,16 +86,12 @@ $subject = 'Vanilla Contact Form - New Message from '.$vfSender->data['name'];
 
 // Define here content of the e-mail message
 $content = "Hey,
-You've received new message from your website. Check the details below:
+You've received a new message from your Taylor's Barbershop website. Check the details below:
 
 Sender's IP address: ".Utils::getIp()."
 Name: {NAME}
-Gender: {GENDER}
 E-mail: {EMAIL}
 Phone number: {TEL}
-Selected department: {DEPARTMENT}
-Message:
-{MESSAGE}
 ";
 
 // Set subject and message content
